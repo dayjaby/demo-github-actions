@@ -15,3 +15,10 @@ jobs:
     if: ${{ always() }} #This will make your workflow2 executed even if workflow1 fails, remove this, if you want to run this only on success of workflow1
     needs: call-workflow1
     uses: ./.github/workflows/workflow2.yaml
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo ${{jobs.call-workflow1.name}}
+      
