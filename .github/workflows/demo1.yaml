@@ -16,8 +16,8 @@ jobs:
     needs: call-workflow1
     uses: ./.github/workflows/workflow2.yaml
   print:
-    needs: call-workflow1
+    needs: [call-workflow1]
     runs-on: ubuntu-latest
     steps:
-       - run: echo "${{ jobs.call-workflow1.name }}"
+       - run: echo "${{ needs.call-workflow1 }}"
       
