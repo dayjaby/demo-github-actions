@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: echo
         run: |
-          echo ${{jobs.call-workflow1.name}}
+          echo "${{ jobs.call-workflow1.name }}"
       
