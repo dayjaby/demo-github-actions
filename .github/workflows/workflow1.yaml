@@ -8,6 +8,7 @@ jobs:
       run:
         working-directory: dirs/workflow1
     steps:
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         run: echo Job1 Executed!
       - name: Docker meta
