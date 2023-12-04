@@ -4,6 +4,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dirs/workflow1
     steps:
       - name: Run a one-line script
         run: echo Job1 Executed!
