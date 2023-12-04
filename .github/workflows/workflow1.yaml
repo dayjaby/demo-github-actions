@@ -12,3 +12,5 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: test
+      - name: Showw status
+        run: cat status
